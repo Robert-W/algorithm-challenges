@@ -19,6 +19,9 @@
 		"coveragePathIgnorePatterns": [
 			"<rootDir>/node_modules"
 		]
+		,"testPathIgnorePatterns": [
+			"_template_"
+		]
 	},
   "dependencies": {
     "jest": "^27.4.7"
