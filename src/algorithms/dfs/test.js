@@ -2,7 +2,7 @@ const DAG = require('../../data-structures/dag');
 const dfs = require('./index');
 
 
-describe('Basic Depth First Search on a directed Graph', () => {
+describe('Algorithm: Basic Depth First Search on a directed Graph', () => {
 
 	test('should return all child nodes from the root node', () => {
 		let graph = new DAG();

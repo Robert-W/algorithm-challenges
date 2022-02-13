@@ -1,6 +1,6 @@
 const DAG = require('./index');
 
-describe('DAG Tests', () => {
+describe('Graph: DAG Tests', () => {
 
 	test('new isntance should create an adjacency list of size 0', () => {
 		let graph = new DAG();

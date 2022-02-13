@@ -1,7 +1,7 @@
 const DAG = require('../../data-structures/dag');
 const topo_sort = require('./index');
 
-describe('Topological Sort using Khans Algorithm', () => {
+describe('Algorithm: Topological Sort using Khans Algorithm', () => {
 
 	test('should list the topological sort order for this graph', () => {
 		let graph = new DAG();
