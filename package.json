@@ -1,11 +1,11 @@
 {
-  "name": "algorithm-challenges",
-  "version": "1.0.0",
-  "description": "Collection of Algorithms, Data Structures, and Challenges to use for practicing and learning how to solve problems with algorithms.",
-  "repository": "https://github.com/Robert-W/algorithm-challenges.git",
-  "author": "Robert-W",
-  "license": "MIT",
-  "private": false,
+	"name": "algorithm-challenges",
+	"version": "1.0.0",
+	"description": "Collection of Algorithms, Data Structures, and Challenges to use for practicing and learning how to solve problems with algorithms.",
+	"repository": "https://github.com/Robert-W/algorithm-challenges.git",
+	"author": "Robert-W",
+	"license": "MIT",
+	"private": false,
 	"scripts": {
 		"test": "jest"
 	},
@@ -23,7 +23,7 @@
 			"_template_"
 		]
 	},
-  "dependencies": {
-    "jest": "^27.4.7"
-  }
+	"dependencies": {
+		"jest": "^27.4.7"
+	}
 }
