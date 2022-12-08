@@ -1,6 +1,6 @@
 /**
 	* @function traverse
-	* @description Mark this cell as visited or not and move to the nexrt one
+	* @description Mark this cell as visited or not and move to the next one
 	* @param {number} row
 	* @param {number} col
 	* @param {number[][]} matrix
@@ -45,7 +45,7 @@ function is_borderland(row, col, matrix) {
 
 /**
 	* @function remove_islands
-	* @description Given a matrix of 1's and 0's, remove all remove all islands
+	* @description Given a matrix of 1's and 0's, remove all
 	* @param {number[][]} matrix
 	* @return {number[][]}
 	*/

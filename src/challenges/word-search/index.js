@@ -63,11 +63,11 @@ function find_words(board, words) {
 		dfs(row, col + 1, node, word);
 		dfs(row, col - 1, node, word);
 
-		// Since we may neef to visit this key again in a separate dfs, rewmove the key
+		// Since we may need to visit this key again in a separate dfs, remove the key
 		visited.delete(key);
 	}
 
-	// Run our dfs from each node int he matrix
+	// Run our dfs from each node in the matrix
 	for (let i = 0; i < rows; i++) {
 		for (let j = 0; j < cols; j++) {
 			dfs(i, j, root);
