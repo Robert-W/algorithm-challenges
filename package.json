@@ -18,12 +18,12 @@
 		],
 		"coveragePathIgnorePatterns": [
 			"<rootDir>/node_modules"
-		]
-		,"testPathIgnorePatterns": [
+		],
+		"testPathIgnorePatterns": [
 			"_template_"
 		]
 	},
 	"dependencies": {
-		"jest": "^27.4.7"
+		"jest": "^29.7.0"
 	}
 }
