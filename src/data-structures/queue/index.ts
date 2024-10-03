@@ -1,15 +1,25 @@
+interface QueueNode<T> {
+  value: T,
+  next?: QueueNode<T>
+}
+
 /**
  * @class Queue
  * @description Simple Queue implementation using a linked list
  */
-export default class Queue {
+export default class Queue<T> {
+
+  length: number;
+  head: QueueNode<T> | undefined;
+  tail: QueueNode<T> | undefined;
+
 	constructor() {
 		this.head = undefined;
 		this.tail = undefined;
 		this.length = 0;
 	}
 
-	enqueue(item) {
+	enqueue(item: T) {
 		const node = { value: item };
 
 		this.length++;

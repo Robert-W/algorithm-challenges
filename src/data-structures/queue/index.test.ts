@@ -1,15 +1,17 @@
+import { describe, test, expect } from 'bun:test';
+
 import Queue from './index';
 
 describe('Queue Tests', () => {
 
-	it('should initialize a size of 0', () => {
+	test('should initialize a size of 0', () => {
 		const queue = new Queue();
 
 		expect(queue.isEmpty()).toBeTruthy();
 	});
 
-	it('enqueued items in an empty list should be in the head position', () => {
-		const queue = new Queue();
+	test('enqueued items in an empty list should be in the head position', () => {
+		const queue = new Queue<number>();
 		const value = 42;
 
 		queue.enqueue(value);
@@ -17,8 +19,8 @@ describe('Queue Tests', () => {
 		expect(queue.peek()).toBe(value);
 	});
 
-	it('should enqueue and dequeue items as expected', () => {
-		const queue = new Queue();
+	test('should enqueue and dequeue items as expected', () => {
+		const queue = new Queue<number>();
 
 		// enqueue, dequeue, peek, size, isEmpty
 		queue.enqueue(2);
