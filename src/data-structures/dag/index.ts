@@ -5,9 +5,9 @@
 class AdjacencyNode {
 
   id: string;
-  weight: number;
+  weight?: number;
 
-	constructor(id: string, weight: number) {
+	constructor(id: string, weight?: number) {
 		this.id = id;
 		this.weight = weight;
 	}
@@ -26,7 +26,7 @@ class DAG {
 		this.adjacency_list = new Map();
 	}
 
-	add_edge(src: string, dest: string, weight: number) {
+	add_edge(src: string, dest: string, weight?: number) {
 		// add a node if we do not have one, this node wont have a weight property which is ok
 		// nodes do not necessarily have to have a weight property
 		if (!this.adjacency_list.has(src)) {
