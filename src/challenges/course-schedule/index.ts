@@ -12,7 +12,7 @@ function can_finish(numCourses: number, prerequisites: number[][]): boolean {
 
   // First, create a list of vertices to represent inbound  connections,
   // set value to 0
-  let in_degrees = new Array(numCourses).fill(0);
+  let in_degrees = Array.from({ length: numCourses }, () => 0);
 
   // Iterate over our prerequisites, and for each "dependency",
   // aka prerequisites[n][0], increment our in_degrees counter

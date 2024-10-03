@@ -5,7 +5,8 @@
   "repository": "https://github.com/Robert-W/algorithm-challenges.git",
   "module": "index.ts",
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "oxlint": "^0.9.9"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
@@ -13,5 +14,8 @@
   "description": "Collection of Algorithms, Data Structures, and Challenges to use for practicing and learning how to solve problems with algorithms.",
   "license": "MIT",
   "private": false,
-  "type": "module"
+  "type": "module",
+	"scripts": {
+		"lint": "oxlint -c ./.oxlintrc.json --tsconfig ./tsconfig.json"
+	}
 }

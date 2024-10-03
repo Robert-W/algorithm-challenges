@@ -26,8 +26,8 @@ function sum_distances(n: number, edges: number[][]): number[] {
   });
 
   // Perform two traversals in order to properly calculate these values, store them in count and results
-  let results = new Array(n).fill(0);
-  let count = new Array(n).fill(1);
+  let results = Array.from({ length: n }, () => 0);
+  let count = Array.from({ length: n }, () => 1);
 
   function postdfs(node: number, parent?: number) {
     // If we have no node, return
