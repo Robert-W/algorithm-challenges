@@ -1,5 +1,5 @@
-const DAG = require('../../data-structures/dag');
-const topo_sort = require('./index');
+import DAG from '../../data-structures/dag';
+import topo_sort from './index';
 
 describe('Algorithm: Topological Sort using Khans Algorithm', () => {
 

@@ -1,4 +1,4 @@
-const findTargetSums = require('./index');
+import findTargetSums from './index';
 
 describe('YouTube: Two Sum 2 Challenge', () => {
 

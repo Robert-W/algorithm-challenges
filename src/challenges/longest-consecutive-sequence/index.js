@@ -29,4 +29,4 @@ function longest_sequence(nums) {
 	return longest;
 }
 
-module.exports = longest_sequence;
+export default longest_sequence;

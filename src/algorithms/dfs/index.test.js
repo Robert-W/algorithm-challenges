@@ -1,5 +1,5 @@
-const DAG = require('../../data-structures/dag');
-const dfs = require('./index');
+import DAG from '../../data-structures/dag';
+import dfs from './index';
 
 
 describe('Algorithm: Basic Depth First Search on a directed Graph', () => {

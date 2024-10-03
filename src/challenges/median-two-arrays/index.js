@@ -78,4 +78,4 @@ function median(smaller, larger) {
 	* total length is even, we return (Math.max(1, 2) + Math.min(3, 4)) / 2 = 2.5
 	*/
 
-module.exports = median;
+export default median;

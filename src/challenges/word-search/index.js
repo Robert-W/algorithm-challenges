@@ -77,4 +77,4 @@ function find_words(board, words) {
 	return Array.from(results);
 }
 
-module.exports = find_words;
+export default find_words;

@@ -53,5 +53,4 @@ function topo_sort(graph) {
 	return order;
 }
 
-module.exports = topo_sort;
-
+export default topo_sort;

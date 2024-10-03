@@ -1,4 +1,4 @@
-const quicksort = require('./index');
+import quicksort from './index';
 
 describe('Algorithm: Quicksort algorithm on an array of numbers', () => {
 

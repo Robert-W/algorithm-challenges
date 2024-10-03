@@ -2,7 +2,7 @@
  * @class Queue
  * @description Simple Queue implementation using a linked list
  */
-module.exports = class Queue {
+export default class Queue {
 	constructor() {
 		this.head = undefined;
 		this.tail = undefined;

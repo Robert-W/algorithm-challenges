@@ -69,4 +69,4 @@ function remove_islands(matrix) {
 	return matrix;
 }
 
-module.exports = remove_islands;
+export default remove_islands;

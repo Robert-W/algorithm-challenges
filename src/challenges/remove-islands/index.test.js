@@ -1,4 +1,4 @@
-const remove_islands = require('./index');
+import remove_islands from './index';
 
 describe('YouTube: Remove Islands Challenge', () => {
 

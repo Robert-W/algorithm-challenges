@@ -1,4 +1,4 @@
-const Queue = require('./index');
+import Queue from './index';
 
 describe('Queue Tests', () => {
 

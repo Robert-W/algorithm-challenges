@@ -1,4 +1,4 @@
-const longest_sequence = require('./index');
+import longest_sequence from './index';
 
 describe('Leetcode: Longest Consecutive Sequence', () => {
 

@@ -1,5 +1,5 @@
-const median_faster = require('./index');
-const median_slower = require('./slower');
+import median_faster from './index';
+import median_slower from './slower';
 
 
 describe('Leetcode: Median of Two Sorted Arrays', () => {

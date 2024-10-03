@@ -1,5 +1,5 @@
-const sum_distances_faster = require('./index');
-const sum_distances_slower = require('./slower');
+import sum_distances_faster from './index';
+import sum_distances_slower from './slower';
 
 describe('Leetcode: Sum of Distances in Tree', () => {
 

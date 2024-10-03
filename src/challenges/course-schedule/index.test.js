@@ -1,4 +1,4 @@
-const can_finish = require('./index');
+import can_finish from './index';
 
 describe('Leetcode: Course Schedule Challenge', () => {
 

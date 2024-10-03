@@ -1,4 +1,4 @@
-const find_words = require('./index');
+import find_words from './index';
 
 describe('Leetcode: Word Search 2', () => {
 

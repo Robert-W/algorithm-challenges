@@ -47,4 +47,4 @@ function can_finish(numCourses, prerequisites) {
 	return in_degrees.every(course => course === 0);
 }
 
-module.exports = can_finish;
+export default can_finish;

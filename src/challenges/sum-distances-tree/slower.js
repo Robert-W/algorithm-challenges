@@ -49,4 +49,4 @@ function sum_distances(n, edges) {
 	return results;
 }
 
-module.exports = sum_distances;
+export default sum_distances;

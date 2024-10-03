@@ -29,4 +29,4 @@ function bfs(vertex, graph) {
   return visited;
 };
 
-module.exports = bfs;
+export default bfs;

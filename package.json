@@ -6,8 +6,9 @@
 	"author": "Robert-W",
 	"license": "MIT",
 	"private": false,
+	"type": "module",
 	"scripts": {
-		"test": "jest"
+		"test": "NODE_OPTIONS=--experimental-vm-modules jest"
 	},
 	"jest": {
 		"testEnvironment": "node",

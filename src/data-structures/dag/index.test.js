@@ -1,4 +1,4 @@
-const DAG = require('./index');
+import DAG from './index';
 
 describe('Graph: DAG Tests', () => {
 

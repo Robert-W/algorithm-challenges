@@ -1,4 +1,4 @@
-const fibonacci = require('./index');
+import fibonacci from './index';
 
 describe('Algorithm: Fibonacci using dynamic programming', () => {
 

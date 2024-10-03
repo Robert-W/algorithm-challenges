@@ -18,4 +18,4 @@ function fibonacci(n) {
 	return second;
 };
 
-module.exports = fibonacci;
+export default fibonacci;

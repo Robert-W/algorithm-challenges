@@ -35,4 +35,4 @@ function median(nums1, nums2) {
 		: values.pop();
 }
 
-module.exports = median;
+export default median;

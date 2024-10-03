@@ -21,4 +21,4 @@ function dfs(vertex, graph, visited = new Set()) {
   return visited;
 };
 
-module.exports = dfs;
+export default dfs;

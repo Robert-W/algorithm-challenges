@@ -21,4 +21,4 @@ function findTargetSums (sorted, target) {
 	return [left + 1, right + 1];
 }
 
-module.exports = findTargetSums;
+export default findTargetSums;

@@ -71,4 +71,4 @@ function quicksort(data, start, end) {
 	return data;
 }
 
-module.exports = quicksort;
+export default quicksort;
