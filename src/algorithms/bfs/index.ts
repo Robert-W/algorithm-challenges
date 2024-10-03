@@ -9,8 +9,8 @@ interface Vertex {
   * @description Function to initialize the bfs from
   * @param {string} vertex - Vertex we are starting from
   * @param {Graph} graph - Graph to traverse. Must have a
-	* @return {Set}
-	*/
+  * @return {Set}
+  */
 function bfs(vertex: Vertex, graph: DAG): Set<string> {
   let visited: Set<string> = new Set();
   let queue: string[] = new Array();
