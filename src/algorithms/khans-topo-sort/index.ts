@@ -1,13 +1,19 @@
+import type DAG from "../../data-structures/dag";
+
+interface InDegreeMap {
+  [key: string]: number
+}
+
 /**
 	* @function topo_sort
 	* @description Perform a topological sort on the given DAG
 	* @param {DAG} graph - See src/data-structures/dag/index.js
 	* @throws {CycleDetected}
 	*/
-function topo_sort(graph) {
-	let in_degrees = {};
-	let queue = new Array();
-	let order = new Array();
+function topo_sort(graph: DAG): string[] {
+	let in_degrees: InDegreeMap = {};
+	let queue: string[] = new Array();
+	let order: string[] = new Array();
 
 	// Create a map of in-degrees for all vertices, set value to 0
 	// Then, calculate the number of times these vertices have an edge coming towards them
@@ -35,7 +41,7 @@ function topo_sort(graph) {
 
 	// While the queue has entries, continue to move through the graph
 	while (queue.length) {
-		let vertex = queue.shift();
+		let vertex = queue.shift()!;
 		// add this vertex to our order
 		order.push(vertex);
 		// for each edge, decrement its in_degree count
