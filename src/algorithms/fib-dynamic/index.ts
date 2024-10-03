@@ -4,7 +4,7 @@
 	* @param {number} n - number to stop at
 	* @return {number}
 	*/
-function fibonacci(n) {
+function fibonacci(n: number): number {
 	let first = 0, second = 1, temp, idx;
 
 	if (n === 0) return first;

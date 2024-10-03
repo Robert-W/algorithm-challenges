@@ -1,3 +1,5 @@
+import { describe, test, expect } from 'bun:test';
+
 import fibonacci from './index';
 
 describe('Algorithm: Fibonacci using dynamic programming', () => {
