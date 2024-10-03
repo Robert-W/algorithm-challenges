@@ -1,4 +1,6 @@
-const { recursiveBinarySearch, binarySearch } = require('./index');
+import { describe, test, expect } from 'bun:test';
+
+import { recursiveBinarySearch, binarySearch } from './index';
 
 describe('Algorithm: Basic Binary Search on a sorted array of numbers', () => {
 

@@ -7,7 +7,7 @@
 	* @param {number} end - ending location to search from
 	* @return {number}
 	*/
-function recursiveBinarySearch(item, data, start = 0, end = data.length) {
+export function recursiveBinarySearch(item: number, data: number[], start: number = 0, end: number = data.length): number {
 	// base case, return -1 signlaing we cannot find the item
 	if (start > end) return -1;
 
@@ -29,7 +29,7 @@ function recursiveBinarySearch(item, data, start = 0, end = data.length) {
  * @param {number} target - number I am looking for
  * @returns {number}
  */
-function binarySearch(data, target) {
+export function binarySearch(data: number[], target: number): number {
 	let left = 0, right = data.length - 1
 
 	while (left <= right) {
@@ -41,9 +41,4 @@ function binarySearch(data, target) {
 	}
 
 	return -1
-}
-
-module.exports = {
-	recursiveBinarySearch,
-	binarySearch
 }
