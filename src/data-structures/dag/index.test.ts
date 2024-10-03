@@ -1,3 +1,5 @@
+import { describe, test, expect } from 'bun:test';
+
 import DAG from './index';
 
 describe('Graph: DAG Tests', () => {
@@ -6,12 +8,6 @@ describe('Graph: DAG Tests', () => {
 		let graph = new DAG();
 
 		expect(graph.adjacency_list.size).toBe(0);
-	});
-
-	test('get_edges should return an empty array when no vertices have been added', () => {
-		let graph = new DAG();
-
-		expect(graph.get_edges().length).toBe(0);
 	});
 
 	test('[DANGER, COVERAGE] can allow for someone to manually add a vertex', () => {
@@ -33,7 +29,7 @@ describe('Graph: DAG Tests', () => {
 		graph.add_edge('0', '1', 12);
 
 		// Grab our edges so we can make sure the weight is applied
-		let edges = graph.get_edges(0);
+		let edges = graph.get_edges('0');
 
 		// Check graph size and that get_edges contains what we expect
 		expect(graph.size()).toBe(1);

@@ -1,9 +1,13 @@
 /**
  * @class AdjacencyNode
- * @description Simlpe Node containing all properties a node could hold
+ * @description Simple Node containing all properties a node could hold
  */
 class AdjacencyNode {
-	constructor(id, weight) {
+
+  id: string;
+  weight: number;
+
+	constructor(id: string, weight: number) {
 		this.id = id;
 		this.weight = weight;
 	}
@@ -16,31 +20,32 @@ class AdjacencyNode {
  */
 class DAG {
 
+  adjacency_list: Map<string, Set<AdjacencyNode>>;
+
 	constructor() {
 		this.adjacency_list = new Map();
 	}
 
-	add_edge(src, dest, weight) {
-		let src_string = String(src);
+	add_edge(src: string, dest: string, weight: number) {
 		// add a node if we do not have one, this node wont have a weight property which is ok
 		// nodes do not necessarily have to have a weight property
-		if (!this.adjacency_list.has(src_string)) {
-			this.adjacency_list.set(src_string, new Set());
+		if (!this.adjacency_list.has(src)) {
+			this.adjacency_list.set(src, new Set());
 		}
 
 		let node = new AdjacencyNode(dest, weight);
-		this.adjacency_list.get(src_string).add(node);
+		this.adjacency_list.get(src)!.add(node);
 	}
 
-	get_edges(src) {
-		return Array.from(this.adjacency_list.get(String(src)) || []);
+	get_edges(src: string): AdjacencyNode[] {
+		return Array.from(this.adjacency_list.get(src) || []);
 	}
 
-	get_vertices() {
+	get_vertices(): string[] {
 		return Array.from(this.adjacency_list.keys());
 	}
 
-	size() {
+	size(): number {
 		return this.adjacency_list.size;
 	}
 
