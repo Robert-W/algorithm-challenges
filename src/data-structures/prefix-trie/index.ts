@@ -1,9 +1,17 @@
+interface Children {
+  [key: string]: PrefixTrie
+}
+
 /**
  * @Class PrefixTrie
  * @description A Prefix trie with the ability to add/remove words for
  * optimizations on certain problems
  */
-module.exports = class PrefixTrie {
+export default class PrefixTrie {
+
+  public children: Children;
+  public word?: string;
+
 	constructor() {
 		this.children = {};
 	}
@@ -14,7 +22,7 @@ module.exports = class PrefixTrie {
 	 * @param {string} key - letter to get child for
 	 * @returns {PrefixTrie|undefined}
 	 */
-	get(key) {
+	get(key: string): PrefixTrie | undefined {
 		return this.children[key];
 	}
 
@@ -24,8 +32,8 @@ module.exports = class PrefixTrie {
 	 * @param {string} word - Word to add to the trie
 	 * @returns void
 	 */
-	add_word(word) {
-		let current = this;
+	add_word(word: string) {
+		let current: PrefixTrie = this;
 		for (const letter of word) {
 			if (current.children[letter] === undefined)
 				current.children[letter] = new PrefixTrie();
@@ -41,8 +49,8 @@ module.exports = class PrefixTrie {
 	 * @param {string} word - Word to remove from the trie
 	 * @returns void
 	 */
-	remove_word(word) {
-		let current = this;
+	remove_word(word: string) {
+		let current: PrefixTrie = this;
 		let stack = [];
 
 		// Traverse to the end
