@@ -1,3 +1,5 @@
+import { describe, expect, test } from 'bun:test';
+
 import findTargetSums from './index';
 
 describe('YouTube: Two Sum 2 Challenge', () => {

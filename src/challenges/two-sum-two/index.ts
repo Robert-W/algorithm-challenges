@@ -5,7 +5,7 @@
 	* @param {number} target
 	* @return {number[]}
 	*/
-function findTargetSums (sorted, target) {
+function findTargetSums (sorted: number[], target: number): number[] {
 	let right = sorted.length - 1;
 	let left = 0;
 
