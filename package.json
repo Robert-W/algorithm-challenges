@@ -6,7 +6,7 @@
   "module": "index.ts",
   "devDependencies": {
     "@types/bun": "latest",
-    "oxlint": "^0.9.9"
+    "oxlint": "^0.9.10"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
@@ -15,7 +15,7 @@
   "license": "MIT",
   "private": false,
   "type": "module",
-	"scripts": {
-		"lint": "oxlint -c ./.oxlintrc.json --tsconfig ./tsconfig.json"
-	}
+  "scripts": {
+    "lint": "oxlint -c ./.oxlintrc.json --tsconfig ./tsconfig.json"
+  }
 }
