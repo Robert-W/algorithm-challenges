@@ -32,11 +32,12 @@ export function encode_array(data: string[]): string {
   * tested three methods:
   *
   * 1. let num = parseInt(char); isNaN(num);
-  * 2. !'0' <= char && char <= '9'
+  * 2. !('0' <= char && char <= '9')
   * 3. let code = char.charCodeAt(0); code <= 48 || code >= 57
   *
-  * Out of these three options, 3 came out on top with 2 being 21% slower and
-  * 1 being 33% slower.
+  * Option 1 ran 30% slower with 129M ops/s ± 1.27%
+  * Option 2 ran 27% slower with 135M ops/s ± 0.57%
+  * Option 3 was the fastest with 186M ops/s ± 0.89%
   *
   * The next thing to benchmark was how to parse a number of variable length.
   * Take '123foo' for example, I need to know the index of where to start since
@@ -86,8 +87,10 @@ export function encode_array(data: string[]): string {
   * function decode_array(encoded_string: string): string[] {
   *   let results = [];
   *   let count = '';
+  *
   *   for (let i = 0; i < encoded_string.length; i++) {
   *     let parsed = parseInt(encoded_string[i]);
+  *
   *     if (isNaN(parsed)) {
   *       let occurences = parseInt(count);
   *       for (let j = 0; j < occurences; j++) results.push(encoded_string[i]);
@@ -96,6 +99,7 @@ export function encode_array(data: string[]): string {
   *       count += parsed;
   *     }
   *   }
+  *
   *   return results;
   * }
   */
