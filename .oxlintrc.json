@@ -3,6 +3,7 @@
 		"node": true
 	},
 	"rules": {
-		"no-this-alias": "off"
+		"no-this-alias": "off",
+		"no-new-array": "off"
 	}
 }
