@@ -1,29 +1,21 @@
 {
-	"name": "algorithm-challenges",
-	"version": "1.0.0",
-	"description": "Collection of Algorithms, Data Structures, and Challenges to use for practicing and learning how to solve problems with algorithms.",
-	"repository": "https://github.com/Robert-W/algorithm-challenges.git",
-	"author": "Robert-W",
-	"license": "MIT",
-	"private": false,
-	"scripts": {
-		"test": "jest"
-	},
-	"jest": {
-		"testEnvironment": "node",
-		"verbose": true,
-		"collectCoverage": true,
-		"coverageReporters": [
-			"text"
-		],
-		"coveragePathIgnorePatterns": [
-			"<rootDir>/node_modules"
-		],
-		"testPathIgnorePatterns": [
-			"_template_"
-		]
-	},
-	"dependencies": {
-		"jest": "^29.7.0"
-	}
+  "name": "algorithm-challenges",
+  "version": "1.0.0",
+  "author": "Robert-W",
+  "repository": "https://github.com/Robert-W/algorithm-challenges.git",
+  "module": "index.ts",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "oxlint": "^0.9.10"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "description": "Collection of Algorithms, Data Structures, and Challenges to use for practicing and learning how to solve problems with algorithms.",
+  "license": "MIT",
+  "private": false,
+  "type": "module",
+  "scripts": {
+    "lint": "oxlint -c ./.oxlintrc.json --tsconfig ./tsconfig.json"
+  }
 }
