@@ -82,7 +82,11 @@ export function encode_array(data: string[]): string {
   * Option 2 was 91% slower with 1.7M ops/s ± 1.23%
   * Option 3 was 8% slower with 18M ops/s ± 1.94%
   *
-  * See the original fastest impl in below:
+  * See the original fastest impl is below, but this was before running any
+  * benchmarks. Comparing this to the one used we saw the following benchmarks:
+  *
+  * Original version was 75% slower with 1.2M ops/s ± 1.57%
+  * Version written after benchmarks was faster with 4.7M ops/s ± 1.17%
   *
   * function decode_array(encoded_string: string): string[] {
   *   let results = [];
@@ -118,46 +122,4 @@ export function decode_array(encoded_string: string): string[] {
   }
 
   return result;
-}
-
-// This solution uses Array.from({ length: n }, () => char)
-// combined with concat
-export function decode_array_from(encoded_string: string): string[] {
-  let results: string[] = [];
-  let count = '';
-
-  for (let i = 0; i < encoded_string.length; i++) {
-    let parsed = parseInt(encoded_string[i]);
-
-    if (isNaN(parsed)) {
-      let occurences = parseInt(count);
-      results = results.concat(Array.from({ length: occurences }, () => encoded_string[i]));
-      count = ''
-    } else {
-      count += parsed;
-    }
-  }
-
-  return results;
-}
-
-// This solution uses new Array(n).fill(char)
-// combined with concat
-export function decode_array_fill(encoded_string: string): string[] {
-  let results: string[] = [];
-  let count = '';
-
-  for (let i = 0; i < encoded_string.length; i++) {
-    let parsed = parseInt(encoded_string[i]);
-
-    if (isNaN(parsed)) {
-      let occurences = parseInt(count);
-      results = results.concat(new Array(occurences).fill(encoded_string[i]));
-      count = ''
-    } else {
-      count += parsed;
-    }
-  }
-
-  return results;
 }
