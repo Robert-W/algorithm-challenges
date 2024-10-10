@@ -2,16 +2,18 @@
  * @class RingBuffer
  * @description Simple implementation of a ring buffer using two pointers
  */
-export default class RungBuffer<T> {
+export default class RingBuffer<T> {
 
   private buffer: Array<T>;
   private read_ptr: number;
   private write_ptr: number;
+  private size: number;
 
   constructor(size: number) {
     this.buffer = new Array(size);
     this.read_ptr = 0;
     this.write_ptr = 0;
+    this.size = 0;
   }
 
   read(): T | undefined {
@@ -21,6 +23,7 @@ export default class RungBuffer<T> {
 
     let item = this.buffer[this.read_ptr];
     this.read_ptr = ++this.read_ptr % this.buffer.length;
+    this.size--;
 
     return item;
   }
@@ -32,16 +35,19 @@ export default class RungBuffer<T> {
 
     this.buffer[this.write_ptr] = item;
     this.write_ptr = ++this.write_ptr % this.buffer.length;
+    this.size++;
 
     return true;
   }
 
+  // Is the read slot empty and able to be written to
+  // not, is the buffer completely empty
   is_empty(): boolean {
-    return this.write_ptr - this.read_ptr === 0;
+    return this.size === 0
   }
 
   is_full(): boolean {
-    return this.buffer.length - Math.abs(this.write_ptr - this.read_ptr) === 0
+    return this.size === this.buffer.length;
   }
 
 }
