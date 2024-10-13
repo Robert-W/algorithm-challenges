@@ -9,3 +9,9 @@ install bun, follow the instructions here
 
 ## Running tests
 With Bun, just run `bun test` to run all of your tests.
+
+## Running Benchmarks
+Some directories have benchmarks in them that were used to help figure out a
+faster implementation. These will be in `bench/index.ts`. You can run them
+by running `bun run <path-to-dir>/bench/index.ts`. Put variant functions in the
+bench folder and you can import them in your tests.

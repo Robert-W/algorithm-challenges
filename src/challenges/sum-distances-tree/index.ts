@@ -9,7 +9,7 @@ interface Tree {
   * @param {number[][]} edges - Array of arrays containing all of our edges
   * @return {number[]} The index of the array represents the sum for a node, e.g. results[0] is the sum of node 0 to all other nodes
   */
-function sum_distances(n: number, edges: number[][]): number[] {
+export default function sum_distances(n: number, edges: number[][]): number[] {
   // First, construct our tree as an adjacency list
   let tree: Tree = {};
 
@@ -59,5 +59,3 @@ function sum_distances(n: number, edges: number[][]): number[] {
 
   return results;
 }
-
-export default sum_distances;

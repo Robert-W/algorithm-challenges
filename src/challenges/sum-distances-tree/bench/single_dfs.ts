@@ -3,13 +3,13 @@ interface Tree {
 }
 
 /**
-  * @function sum_distances
+  * @function sum_distances_single_dfs
   * @description Find the sum of the distances from each node to every other node in an undirected tree/graph
   * @param {number} n - number of nodes
   * @param {number[][]} edges - Array of arrays containing all of our edges
   * @return {number[]} The index of the array represents the sum for a node, e.g. results[0] is the sum of node 0 to all other nodes
   */
-function sum_distances(n: number, edges: number[][]): number[] {
+export default function sum_distances_single_dfs(n: number, edges: number[][]): number[] {
   let results = [];
   // First, construct our tree as an adjacency list
   let tree: Tree = {};
@@ -53,4 +53,3 @@ function sum_distances(n: number, edges: number[][]): number[] {
   return results;
 }
 
-export default sum_distances;

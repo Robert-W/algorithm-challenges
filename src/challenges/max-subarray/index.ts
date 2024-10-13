@@ -8,13 +8,8 @@ export function max_subarray_sum(input: number[]): number {
   let best_sum = input[0];
 
   for (let i = 1; i < input.length; i++) {
-    curr_sum = input[i] + curr_sum > input[i]
-      ? input[i] + curr_sum
-      : input[i];
-
-    best_sum = best_sum > curr_sum
-      ? best_sum
-      : curr_sum;
+    curr_sum = Math.max(input[i], input[i] + curr_sum);
+    best_sum = Math.max(best_sum, curr_sum);
   }
 
   return best_sum
